@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'DOCKER_SLAVE'
+    }
+    
+  }
   stages {
     stage('Foo') {
       steps {
